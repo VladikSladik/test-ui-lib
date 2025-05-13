@@ -14,6 +14,7 @@ import App from "./App.tsx";
 import ChakraExample from "./ChakraExample.tsx";
 import AntExample from "./AntExample.tsx";
 import Material from "./Material.tsx";
+import Shadsn from "./Shadsn.tsx";
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -48,7 +49,13 @@ const material = createRoute({
   component: Material
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, chakraRoute,antRoute,material]);
+const shadsn = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/shadcn",
+  component: Shadsn
+});
+
+const routeTree = rootRoute.addChildren([indexRoute, chakraRoute,antRoute,material,shadsn]);
 
 const router = createRouter({ routeTree });
 
