@@ -16,7 +16,6 @@ import {
     ModalFooter,
     Label,
     TextInput,
-    Checkbox,
     FileInput,
     ToggleSwitch,
     Badge,
@@ -228,7 +227,7 @@ export default function App() {
             <Modal show={showModal} onClose={() => setShowModal(false)} size="md">
                 <ModalHeader>Добавить сотрудника</ModalHeader>
                 <ModalBody>
-                    <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+                    <form className="flex  flex-col gap-4" onSubmit={handleSubmit}>
                         <div>
                             <Label htmlFor="name">Имя</Label>
                             <TextInput
